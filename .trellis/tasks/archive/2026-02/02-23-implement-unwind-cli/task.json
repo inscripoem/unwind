@@ -1,0 +1,29 @@
+{
+  "id": "implement-unwind-cli",
+  "name": "implement-unwind-cli",
+  "title": "Implement unwind CLI tool",
+  "description": "智能逆向卸载 CLI 工具，包含 monorepo 架构、AI 分析、风险分级、文档站",
+  "status": "completed",
+  "dev_type": "fullstack",
+  "scope": "major",
+  "priority": "P2",
+  "creator": "claude-agent",
+  "assignee": "claude-agent",
+  "createdAt": "2026-02-23",
+  "completedAt": "2026-02-23",
+  "branch": "main",
+  "base_branch": "main",
+  "worktree_path": null,
+  "current_phase": 4,
+  "next_action": [],
+  "commit": "9df8519",
+  "pr_url": null,
+  "subtasks": [],
+  "relatedFiles": [
+    "packages/core/",
+    "packages/cli/",
+    "apps/docs/",
+    ".trellis/spec/unwind-architecture.md"
+  ],
+  "notes": "完成 monorepo 初始化、核心包、CLI、文档站、架构规范"
+}
