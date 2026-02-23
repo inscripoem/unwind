@@ -1,0 +1,33 @@
+# unwind
+
+Intelligent Reverse Uninstaller - Reverse-engineer installation scripts and generate precise uninstall commands using AI.
+
+## What is unwind?
+
+`unwind` is a powerful CLI tool that analyzes installation scripts and commands, then generates safe uninstall procedures. It uses AI to understand what an installation script does and creates the reverse operations.
+
+## Quick Start
+
+```bash
+# Install globally
+npm install -g unwind
+
+# Run the setup wizard
+unwind
+
+# Or directly analyze an installation command
+unwind "curl -fsSL https://example.com/install.sh | bash"
+```
+
+## Try it Now
+
+import { TryUnwindMini } from '../components/TryUnwindMini'
+
+<TryUnwindMini />
+
+## Features
+
+- **Smart Analysis** - AI-powered reverse engineering of installation scripts
+- **Risk Classification** - Automatically identifies high-risk operations (package managers, runtimes)
+- **Safe by Default** - Critical operations are skipped unless explicitly confirmed
+- **Multiple Input Types** - Supports URLs, commands, and program names

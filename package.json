@@ -1,0 +1,19 @@
+{
+  "name": "unwind-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Intelligent reverse uninstaller monorepo",
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm -r --parallel dev",
+    "typecheck": "pnpm -r typecheck",
+    "docs:dev": "pnpm --filter docs dev",
+    "docs:build": "pnpm --filter docs build",
+    "cli:build": "pnpm --filter @unwind/core build && pnpm --filter unwind build",
+    "cli:start": "pnpm --filter unwind start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.28.2"
+}

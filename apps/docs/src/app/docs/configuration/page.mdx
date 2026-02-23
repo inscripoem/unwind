@@ -1,0 +1,43 @@
+# Configuration
+
+unwind stores its configuration in `~/.config/unwind/config.yaml`.
+
+## Configuration File
+
+```yaml
+language: zh-CN  # or en-US
+ai:
+  baseUrl: https://api.openai.com/v1
+  apiKey: sk-your-api-key
+  model: gpt-4o
+```
+
+## Environment Variables
+
+Environment variables take precedence over the configuration file:
+
+| Variable | Description |
+|----------|-------------|
+| `UNWIND_API_KEY` | API key for the AI provider |
+| `UNWIND_BASE_URL` | Base URL for the API endpoint |
+| `UNWIND_MODEL` | Model name to use |
+
+Example:
+
+```bash
+export UNWIND_API_KEY="sk-your-api-key"
+export UNWIND_BASE_URL="https://api.openai.com/v1"
+export UNWIND_MODEL="gpt-4o"
+```
+
+## Supported Providers
+
+unwind works with any OpenAI-compatible API:
+
+- OpenAI
+- Azure OpenAI
+- DeepSeek
+- Groq
+- Together AI
+- Local models via Ollama
+- And more...

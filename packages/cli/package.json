@@ -1,0 +1,38 @@
+{
+  "name": "unwind",
+  "version": "0.1.0",
+  "description": "Intelligent reverse uninstaller - analyze installation scripts and generate safe uninstall commands",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "unwind": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "start": "node ./dist/index.js"
+  },
+  "keywords": [
+    "uninstall",
+    "cli",
+    "ai",
+    "reverse-engineering",
+    "cleanup"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@clack/prompts": "^1.0.1",
+    "@unwind/core": "workspace:*",
+    "execa": "^9.6.1",
+    "marked": "^15.0.12",
+    "marked-terminal": "^7.3.0",
+    "yaml": "^2.8.2"
+  },
+  "devDependencies": {
+    "@types/marked-terminal": "^6.1.1",
+    "@types/node": "^25.3.0",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,48 @@
+# Getting Started
+
+Learn how to install and configure unwind.
+
+## Installation
+
+```bash
+npm install -g unwind
+```
+
+Or with other package managers:
+
+```bash
+# pnpm
+pnpm add -g unwind
+
+# yarn
+yarn global add unwind
+
+# bun
+bun add -g unwind
+```
+
+## First Run
+
+When you run `unwind` for the first time, it will guide you through the setup wizard:
+
+1. **Language Selection** - Choose your preferred language (English or Chinese)
+2. **AI Configuration** - Enter your OpenAI-compatible API credentials
+3. **Model Selection** - Choose which model to use for analysis
+
+Your configuration will be saved to `~/.config/unwind/config.yaml`.
+
+## Quick Usage
+
+```bash
+# Interactive mode
+unwind
+
+# Direct mode with a command
+unwind "npm install -g typescript"
+
+# Direct mode with a URL
+unwind "https://bun.sh/install"
+
+# Direct mode with a program name
+unwind "neovim"
+```

@@ -1,0 +1,21 @@
+{
+  "welcome": "Welcome to unwind!",
+  "selectLanguage": "Select your language",
+  "enterBaseUrl": "Enter AI API base URL",
+  "enterApiKey": "Enter your API key",
+  "selectModel": "Select a model",
+  "enterModelManually": "Enter model name manually",
+  "fetchingModels": "Fetching available models...",
+  "fetchModelsFailed": "Could not fetch models, please enter manually",
+  "configSaved": "Configuration saved!",
+  "enterInput": "Paste installation command, URL, or program name",
+  "analyzing": "Analyzing...",
+  "analysisComplete": "Analysis complete",
+  "confirmExecute": "Execute safe and warning operations?",
+  "confirmCritical": "Also execute critical operations? (not recommended)",
+  "executing": "Executing...",
+  "executionComplete": "Execution complete",
+  "executionFailed": "Execution failed",
+  "skippedCritical": "Skipped critical operations",
+  "goodbye": "Goodbye!"
+}

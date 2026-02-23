@@ -1,0 +1,68 @@
+# Risk Levels
+
+unwind classifies uninstall operations into three risk levels to protect your system.
+
+## Risk Classification
+
+### 🚨 Critical (High Risk)
+
+Operations that could affect other programs or system stability.
+
+**Examples:**
+- Uninstalling package managers (pip, npm, cargo, brew)
+- Removing runtimes (Node.js, Python, Ruby)
+- Deleting system tools (git, curl, wget)
+
+**Default behavior:** Skipped. You must explicitly opt-in to execute these.
+
+### ⚠️ Warning (Medium Risk)
+
+Operations that modify shared configurations.
+
+**Examples:**
+- Removing entries from `~/.bashrc` or `~/.zshrc`
+- Modifying PATH environment variable
+- Deleting shared configuration files
+
+**Default behavior:** Executed with a warning displayed.
+
+### ✅ Safe (Low Risk)
+
+Operations that only affect the target application.
+
+**Examples:**
+- Removing application directories (`~/.myapp/`)
+- Deleting application binaries (`/usr/local/bin/myapp`)
+- Cleaning up application-specific config files
+
+**Default behavior:** Executed normally.
+
+## Execution Flow
+
+```
+1. Analysis complete
+   ↓
+2. Display uninstall guide
+   - Safe operations: listed normally
+   - Warning operations: highlighted in yellow
+   - Critical operations: highlighted in red with explanation
+   ↓
+3. Confirmation prompt
+   "Execute safe and warning operations? [Y/n]"
+   ↓
+4. Optional: Include critical operations
+   "Also execute critical operations? (not recommended) [y/N]"
+   ↓
+5. Execute selected operations
+```
+
+## Why This Matters
+
+Consider this scenario:
+
+1. You install a tool that also installs `uv` (Python package manager)
+2. You later want to uninstall that tool
+3. unwind detects that uninstalling `uv` is part of the reverse process
+4. But you have other Python projects that depend on `uv`!
+
+By classifying `uv` as **critical**, unwind protects your other projects from breaking.
